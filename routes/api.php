@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('/register/google', 'SocialController@getGoogleAuth');
+Route::get('/register/google/callback', 'SocialController@getGoogleCallback');
+
+Route::any('/register/linkedin', 'SocialController@getLinkedInAuth');
+Route::any('/register/linkedin/callbac4k', 'SocialController@getLinkedInCallback');
+
 Route::post('/register', 'AuthController@register')->name('register');
 Route::post('/login', 'AuthController@login')->name('login');
 
