@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('/register/github', 'SocialController@getGithubAuth');
+Route::get('/register/github/callback', 'SocialController@getGithubCallback');
+
 Route::get('/register/google', 'SocialController@getGoogleAuth');
 Route::get('/register/google/callback', 'SocialController@getGoogleCallback');
 

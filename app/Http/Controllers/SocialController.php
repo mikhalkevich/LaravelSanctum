@@ -30,8 +30,23 @@ class SocialController extends Controller
 
     public function getLinkedInCallback()
     {
+        $user = Socialite::driver('linkedin')->user();
 
-            $user = Socialite::driver('linkedin')->user();
+        return response()->json([
+            'data' => $user,
+        ]);
+    }
+
+    //github
+    public function getGithubAuth()
+    {
+        return Socialite::driver('github')->redirect();
+    }
+
+    public function getGithubCallback()
+    {
+        $user = Socialite::driver('github')->user();
+
         return response()->json([
             'data' => $user,
         ]);
