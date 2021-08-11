@@ -17,6 +17,7 @@ class CreateSocialUsersTable extends Migration
             $table->id();
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('social_id');
+            $table->string('code')->nullable();
             $table->text('body')->nullable();
             $table->timestamps();
         });

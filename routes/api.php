@@ -20,7 +20,13 @@ Route::get('/register/google', 'SocialController@getGoogleAuth');
 Route::get('/register/google/callback', 'SocialController@getGoogleCallback');
 
 Route::any('/register/linkedin', 'SocialController@getLinkedInAuth');
-Route::any('/register/linkedin/callbac4k', 'SocialController@getLinkedInCallback');
+Route::any('/register/linkedin/callback', 'SocialController@getLinkedInCallback');
+
+Route::any('/register/VK', 'SocialController@getVKAuth');
+Route::any('/register/VK/callback', 'SocialController@getVKCallback');
+
+Route::any('/register/facebook', 'SocialController@getFacebookAuth');
+Route::any('/register/facebook/callback', 'SocialController@getFacebookCallback');
 
 Route::post('/register', 'AuthController@register')->name('register');
 Route::post('/login', 'AuthController@login')->name('login');
