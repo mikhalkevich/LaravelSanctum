@@ -21,6 +21,7 @@ class CreateSocialsTable extends Migration
             $table->string('link_develop')->nullable();
             $table->string('email')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

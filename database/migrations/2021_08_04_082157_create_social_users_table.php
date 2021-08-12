@@ -15,11 +15,18 @@ class CreateSocialUsersTable extends Migration
     {
         Schema::create('social_users', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('user_id')->nullable();
             $table->unsignedInteger('social_id');
+            $table->string('social_user_id')->nullable();
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('avatar')->nullable();
+            $table->integer('expires_in')->nullable();
+            $table->text('user_object')->nullable();
+            $table->text('token')->nullable();
             $table->string('code')->nullable();
-            $table->text('body')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
