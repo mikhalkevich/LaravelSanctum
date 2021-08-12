@@ -75,9 +75,19 @@ class SocialController extends Controller
         $this->registerOrLogin($userSocial);
     }
 
+    public function getOKAuth(){
+        return Socialite::driver('odnoklassniki')->redirect();
+    }
+
+    public function getOKCallback(Request $request)
+    {
+        $userSocial = Socialite::driver('odnoklassniki')->user();
+        dd($userSocial);
+        $this->registerOrLogin($userSocial);
+    }
+
     private function registerOrLogin($user = null)
     {
-        // dd($user->email);
         abort_if(!$user->email, 403, 'В запросе отсутствует email');
         $user = User::where('email', $user->email)->first();
         if ($user) {

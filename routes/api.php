@@ -22,6 +22,9 @@ Route::get('/register/google/callback', 'SocialController@getGoogleCallback');
 Route::any('/register/linkedin', 'SocialController@getLinkedInAuth');
 Route::any('/register/linkedin/callback', 'SocialController@getLinkedInCallback');
 
+Route::any('/register/OK', 'SocialController@getOKAuth');
+Route::any('/register/OK/callback', 'SocialController@getOKCallback');
+
 Route::any('/register/VK', 'SocialController@getVKAuth');
 Route::any('/register/VK/callback', 'SocialController@getVKCallback');
 

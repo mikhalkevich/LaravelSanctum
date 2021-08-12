@@ -40,6 +40,11 @@ class SocialSeeder extends Seeder
                 'link'         => 'http://facebook.com',
                 'link_develop' => 'http://developers.facebook.com/apps',
                 'email'        => 'mikhalkevich@ya.ru',
+            ], [
+                'name'         => 'Ok',
+                'link'         => 'https://ok.ru',
+                'link_develop' => 'https://apiok.ru/dev/app/create',
+                'email'        => 'mikhalkevich@ya.ru',
             ],
         ]);
     }

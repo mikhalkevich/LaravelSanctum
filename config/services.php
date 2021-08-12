@@ -38,6 +38,12 @@ return [
         'client_secret' => env('VK_CLIENT_SECRET'),
         'redirect' => 'http://localhost:8000/api/register/VK/callback',
     ],
+    'odnoklassniki' => [
+        'client_id' => env('OK_CLIENT_ID'),
+        'client_public' => env('OK_CLIENT_PUBLIC'),
+        'client_secret' => env('OK_CLIENT_SECRET'),
+        'redirect' => 'http://localhost:8000/api/register/OK/callback'
+    ],
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
