@@ -23,7 +23,7 @@ class SocialSeeder extends Seeder
             ], [
                 'name'         => 'Github',
                 'link'         => 'http://github.com',
-                'link_develop' => 'https://github.com/settings/applications',
+                'link_develop' => 'https://github.com/settings/developers',
                 'email'        => 'mikhalkevich@ya.ru',
             ], [
                 'name'         => 'Google',

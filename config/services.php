@@ -16,33 +16,33 @@ return [
     'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8000/api/register/github/callback',
+        'redirect' => 'http://localhost:8080/api/register/github/callback',
     ],
     'linkedin' => [
         'client_id' => env('LINKEDIN_CLIENT_ID'),
         'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8000/api/register/linkedin/callback',
+        'redirect' => 'http://localhost:8080/api/register/linkedin/callback',
     ],
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8000/api/register/google/callback',
+        'redirect' => 'http://localhost:8080/api/register/google/callback',
     ],
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+        'redirect' => 'http://localhost:8080/auth/facebook/callback',
     ],
     'vkontakte' => [
         'client_id' => env('VK_CLIENT_ID'),
         'client_secret' => env('VK_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8000/api/register/VK/callback',
+        'redirect' => 'http://localhost:8080/api/register/VK/callback',
     ],
     'odnoklassniki' => [
         'client_id' => env('OK_CLIENT_ID'),
         'client_public' => env('OK_CLIENT_PUBLIC'),
         'client_secret' => env('OK_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8000/api/register/OK/callback'
+        'redirect' => 'http://localhost:8080/api/register/OK/callback'
     ],
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
