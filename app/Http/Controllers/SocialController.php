@@ -78,6 +78,19 @@ class SocialController extends Controller
         return $this->registerOrLogin($userSocial, 6);
     }
 
+    //twitter
+    public function getTwitterAuth()
+    {
+        return Socialite::driver('twitter')->redirect();
+    }
+
+    public function getTwitterCallback()
+    {
+        $user = Socialite::driver('twitter')->userFromTokenAndSecret(env('TWITTER_ACCESS_TOKEN'), env('TWITTER_ACCESS_TOKEN_SECRET'));
+
+        return $this->registerOrLogin($user, 7);
+    }
+
     private function registerOrLogin($userSocial = null, $social_id = null)
     {
         abort_if(!$userSocial->email, 403, 'В запросе отсутствует email');

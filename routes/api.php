@@ -31,6 +31,9 @@ Route::any('/register/VK/callback', 'SocialController@getVKCallback');
 Route::any('/register/facebook', 'SocialController@getFacebookAuth');
 Route::any('/register/facebook/callback', 'SocialController@getFacebookCallback');
 
+Route::any('/register/twitter', 'SocialController@getTwitterAuth');
+Route::any('/register/twitter/callback', 'SocialController@getTwitterCallback');
+
 Route::post('/register', 'AuthController@register')->name('register');
 Route::post('/login', 'AuthController@login')->name('login');
 
